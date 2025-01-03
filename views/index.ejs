@@ -1,0 +1,56 @@
+<%- include("partials/main-header.ejs") %>
+  <h1>Welcome to Temitayo's Blog </h1>
+  <em class="tagline">
+    ...Where curiosity meets creativity, and stories spark transformation.</em>
+  <br>
+  <% if (locals.topic && locals.niche && locals.author && locals.content) { %>
+      <h2><%= topic %></h2>
+      <p><em>By: <%= author %> at <%= new Date().getDate() %>/<%= new Date().getMonth() + 1 %>/<%= new Date().getFullYear() %>, <%= new Date().getHours() %>:<%= new Date().getMinutes() %></em></p>
+      <p><em><%= content %></em> </p>
+      <a href="/write?fname=<%= encodeURIComponent(author.split(' ')[0]) %>&lname=<%= encodeURIComponent(author.split(' ')[1]) %>&email=<%= encodeURIComponent(mail) %>&phone=<%= encodeURIComponent(phone) %>&topic=<%= encodeURIComponent(topic) %>&niche=<%= encodeURIComponent(niche) %>&message=<%= encodeURIComponent(content) %>">Edit Post</a>
+      <a href="delete">Delete Post</a>
+
+   <%} else { %>
+    <p>Dive into a world of insights, ideas, and inspiration. 
+      At Temitayo's Blog, we believe in the power of words to inform, empower, and connect. 
+      Whether you’re seeking fresh perspectives on technology, lifestyle tips, 
+      or personal growth strategies, you’ll find content that resonates with your journey.
+    </p>
+    <p>
+      This is more than just a blog—it’s a community of curious minds and bold dreamers. 
+      Together, we explore the stories that matter, uncover the beauty in everyday moments, 
+      and navigate the challenges of our rapidly evolving world.
+    </p>
+    <p>
+      Temitayo’s Blog is your space to learn, share, and grow. 
+      So grab a cup of coffee, settle in, and let’s explore the possibilities together.
+    </p>
+  
+    <p>
+      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+      totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+      Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+      sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, 
+      qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
+      sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+      Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
+      nisi ut aliquid ex ea commodi consequatur? 
+      Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+      vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+    </p>
+  
+    <p>
+      Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+      totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+      Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+      sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, 
+      qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
+      sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. 
+      Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, 
+      nisi ut aliquid ex ea commodi consequatur? 
+      Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
+      vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+    </p>
+    <% } %>
+<%- include("partials/footer.ejs") %>
+  

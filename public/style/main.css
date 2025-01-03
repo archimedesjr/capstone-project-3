@@ -1,0 +1,26 @@
+body {
+  background-color: whitesmoke;
+  font-family: Helvetica, Arial, sans-serif;
+  color: black;
+}
+
+h1 {
+  font-size: 3 rem;
+  text-align: center;
+}
+
+p {
+  text-align: justify;
+}
+
+.tagline {
+  display: block; /* Ensures it occupies its line */
+  text-align: right; /* Centers the text */
+  font-style: italic; /* Keeps the emphasis */
+  font-size: 1.2em; /* Adjusts the size for emphasis */
+  color: #555; /* Optional: a softer color for a subtle look */
+}
+
+.form {
+  text-align: center;
+}

@@ -1,0 +1,30 @@
+<%- include("partials/sub-header.ejs") %>
+  <br>
+  <h1>Create Your Own Post</h1>
+  <div class="form">
+    <form action="/trending-gist" method="POST">
+      <label for="fname">First name:</label>
+      <input name="fname" type="text" class="feedback-input" value="<%= fname || '' %>" required />
+      <label for="lname">Last name:</label>
+      <input name="lname" type="text" class="feedback-input" value="<%= lname || '' %>" required />
+      <br>
+      <br>
+      <label for="email">Email Address:</label>
+      <input name="email" type="text" class="feedback-input" value="<%= email || '' %>" required/>
+      <label for="phone">Phone Number:</label>
+      <input name="phone" type="text" class="feedback-input" value="<%= phone || '' %>" required/>
+      <br>
+      <br>
+      <label for="topic">Topic:</label>
+      <input name="topic" type="text" class="feedback-input" value="<%= topic || '' %>" required />
+      <label for="niche">Niche:</label>
+      <input name="niche" type="text" class="feedback-input" value="<%= niche || '' %>" required />
+      <br>
+      <br>
+      <label for="write-post">Write your post here:</label><br>
+      <textarea name="message" class="feedback-input" placeholder="Write Post" required><%= message || '' %></textarea>
+      <br>
+      <input type="submit" value="Submit" />
+    </form>    
+  </div>
+<%- include("partials/footer.ejs") %>
